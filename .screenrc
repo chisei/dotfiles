@@ -1,0 +1,23 @@
+# 起動時に著作権表示をoff
+startup_message off
+
+# <C-j>
+escape ^Jj 
+
+# <C-j> l -> windowlist
+bind l windowlist
+
+# スクロールバッファサイズ
+defscrollback 4092
+
+# encode
+defencoding utf8
+encoding utf8 utf8
+
+caption always ”%{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d(%D) %{=b w}%c
+
+# view list
+hardstatus alwayslastline "[%m/%d %02c:%s] %`%-w%{=b bw}%n %t%{-}%+w %= (%l)"
+
+term xterm-256color
+
