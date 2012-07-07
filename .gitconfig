@@ -1,0 +1,15 @@
+[user]
+    user = Chisei Takenouchi
+    #email = 
+
+[color]
+    ui = true
+
+[alias]
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+
+[core]
+    editor = vim
