@@ -1,3 +1,21 @@
+set nocompatible
+
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimfiler'
+
+" <C-U><C-A>
+noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
+
+" default explorer is vimfiler.
+let g:vimfiler_as_default_explorer=1
+
 set nobackup
 syntax on
 set nu
@@ -19,6 +37,3 @@ set fenc=utf-8
 
 set iminsert=0
 set imsearch=0
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
