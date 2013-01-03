@@ -19,3 +19,6 @@ set fenc=utf-8
 
 set iminsert=0
 set imsearch=0
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
