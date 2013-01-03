@@ -16,7 +16,13 @@ noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
 " default explorer is vimfiler.
 let g:vimfiler_as_default_explorer=1
 
+" enabled neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+
+if has('unix') && executable('/usr/bin/osascript')
+    noremap <C-B><C-R> <ESC>:w<CR>:!osascript ~/dotfiles/browser_reload.scpt<CR><CR>
+endif
+
 
 set nobackup
 syntax on
