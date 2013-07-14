@@ -9,6 +9,7 @@ NeoBundle 'https://github.com/Shougo/unite.vim'
 NeoBundle 'https://github.com/Shougo/neocomplcache'
 NeoBundle 'https://github.com/Shougo/vimfiler'
 NeoBundle 'https://github.com/scrooloose/syntastic'
+NeoBundle 'https://github.com/beyondwords/vim-twig'
 
 " <C-U><C-A>
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
