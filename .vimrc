@@ -8,7 +8,6 @@ endif
 NeoBundle 'https://github.com/Shougo/unite.vim'
 NeoBundle 'https://github.com/Shougo/neocomplcache'
 NeoBundle 'https://github.com/Shougo/vimfiler'
-NeoBundle 'https://github.com/scrooloose/syntastic'
 NeoBundle 'https://github.com/beyondwords/vim-twig'
 NeoBundle 'https://github.com/elzr/vim-json'
 
@@ -22,8 +21,6 @@ let g:neocomplcache_enable_at_startup=1 " enabled neocomplcache
 if has('unix') && executable('/usr/bin/osascript')
     noremap <C-B><C-R> <ESC>:w<CR>:!osascript ~/dotfiles/browser_reload.scpt<CR><CR>
 endif
-
-let g:syntastic_auto_jump=1 " エラー箇所に自動でジャンプ
 
 syntax on
 set nobackup
@@ -43,3 +40,8 @@ set fenc=utf-8
 set iminsert=0
 set imsearch=0
 autocmd BufNewFile,BufRead *.twig set filetype=html.twig
+
+" load local configuration
+if filereadable(expand('~/.vimrc.local'))
+    source ~/.vimrc.local
+endif
