@@ -3,8 +3,12 @@
 WORK_SPACE=$(cd $(dirname $0) && pwd)
 cd $WORK_SPACE
 
+# git submodule update
 git submodule init
 git submodule update
+
+# vim NeoBundleInstall
+vim -c "NeoBundleInstall" -c "quit"
 
 # make symbolic link
 cd $HOME

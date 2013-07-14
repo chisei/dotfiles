@@ -10,6 +10,7 @@ NeoBundle 'https://github.com/Shougo/neocomplcache'
 NeoBundle 'https://github.com/Shougo/vimfiler'
 NeoBundle 'https://github.com/scrooloose/syntastic'
 NeoBundle 'https://github.com/beyondwords/vim-twig'
+NeoBundle 'https://github.com/elzr/vim-json'
 
 " <C-U><C-A>
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
@@ -41,3 +42,4 @@ set enc=utf-8
 set fenc=utf-8
 set iminsert=0
 set imsearch=0
+autocmd BufNewFile,BufRead *.twig set filetype=html.twig
