@@ -5,10 +5,10 @@ if has('vim_starting')
     call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'https://github.com/Shougo/unite.vim'
+NeoBundle 'https://github.com/Shougo/neocomplcache'
+NeoBundle 'https://github.com/Shougo/vimfiler'
+NeoBundle 'https://github.com/scrooloose/syntastic'
 
 " <C-U><C-A>
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
