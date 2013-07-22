@@ -54,9 +54,9 @@ DISABLE_AUTO_TITLE=true
 
 export EDITOR=/usr/bin/vim
 
-export PATH="/home/$(id --user --name)/.phpenv/bin:$PATH"
-export PATH="/var/lib/gems/1.8/bin:$PATH"
-eval "$(phpenv init -)"
+#export PATH="/home/$(id --user --name)/.phpenv/bin:$PATH"
+#export PATH="/var/lib/gems/1.8/bin:$PATH"
+#eval "$(phpenv init -)"
 
 # vcs_info
 autoload -Uz vcs_info
