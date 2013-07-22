@@ -15,6 +15,7 @@ NeoBundle 'https://github.com/elzr/vim-json'
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
 
 let g:vimfiler_as_default_explorer=1 " default explorer is vimfiler.
+let g:vimfiler_safe_mode_by_default=0
 
 let g:neocomplcache_enable_at_startup=1 " enabled neocomplcache
 
