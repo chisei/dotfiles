@@ -72,3 +72,4 @@ precmd () {
 }
 RPROMPT="${time} %{$fg[magenta]%}%{$reset_color%}%1(v|%F{green}%1v%f|)%{$reset_color%}"
 #RPROMPT="%1(v|%F{green}%1v%f|)"
+PROMPT="%{$fg[magenta]%}[%n@%m %c] %{$reset_color%}"
