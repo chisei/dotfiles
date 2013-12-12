@@ -15,6 +15,7 @@ ln -s $WORK_SPACE/.vimrc $HOME/.vimrc
 ln -s $WORK_SPACE/.tmux.conf $HOME/.tmux.conf
 ln -s $WORK_SPACE/.my.cnf $HOME/.my.cnf
 ln -s $WORK_SPACE/.grc $HOME/.grc
+ln -s $WORK_SPACE/.gitconfig $HOME/.gitconfig
 
 # vim NeoBundleInstall
 vim -c "NeoBundleInstall" -c "quit"
