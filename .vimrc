@@ -10,6 +10,7 @@ NeoBundle 'https://github.com/Shougo/neocomplcache'
 NeoBundle 'https://github.com/Shougo/vimfiler'
 NeoBundle 'https://github.com/beyondwords/vim-twig'
 NeoBundle 'https://github.com/elzr/vim-json'
+NeoBundle 'https://github.com/osyo-manga/vim-over'
 
 " <C-U><C-A>
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
@@ -22,6 +23,8 @@ let g:neocomplcache_enable_at_startup=1 " enabled neocomplcache
 if has('unix') && executable('/usr/bin/osascript')
     noremap <C-B><C-R> <ESC>:w<CR>:!osascript ~/dotfiles/browser_reload.scpt<CR><CR>
 endif
+
+nnoremap <silent> ,m :OverCommandLine<CR>
 
 syntax on
 set nobackup
