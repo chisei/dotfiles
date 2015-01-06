@@ -13,6 +13,7 @@
     graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
     pl = pull
     ps = push
+    p = !git push origin `git rev-parse --abbrev-ref HEAD`
 
 [core]
     editor = vim
