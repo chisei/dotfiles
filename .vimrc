@@ -44,6 +44,7 @@ set enc=utf-8
 set fenc=utf-8
 set iminsert=0
 set imsearch=0
+set noundofile
 autocmd BufNewFile,BufRead *.twig set filetype=html.twig
 
 " load local configuration
