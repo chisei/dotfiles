@@ -1,11 +1,10 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="wedisagree"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -37,6 +36,7 @@ plugins=(git)
 if [ -r $ZSH/oh-my-zsh.sh ]
 then
     source $ZSH/oh-my-zsh.sh
+    export ZSH_THEME="robbyrussell"
 fi
 
 if [ -r $HOME/dotfiles/.aliases ]
@@ -73,3 +73,6 @@ precmd () {
 RPROMPT="${time} %{$fg[magenta]%}%{$reset_color%}%1(v|%F{green}%1v%f|)%{$reset_color%}"
 #RPROMPT="%1(v|%F{green}%1v%f|)"
 PROMPT="%{$fg[magenta]%}[%n@%m %c] %{$reset_color%}"
+
+bindkey '^R' history-incremental-pattern-search-backward
+bindkey '^S' history-incremental-pattern-search-forward
