@@ -13,6 +13,7 @@ NeoBundle 'https://github.com/elzr/vim-json'
 NeoBundle 'https://github.com/osyo-manga/vim-over'
 NeoBundle 'https://github.com/kchmck/vim-coffee-script'
 NeoBundle 'https://github.com/briancollins/vim-jst'
+NeoBundle 'https://github.com/othree/yajs'
 
 " <C-U><C-A>
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
