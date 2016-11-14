@@ -2,5 +2,10 @@ alias l='ls -la'
 alias ll='ls -la'
 alias la='ls -lA'
 alias a='ag'
-alias gg='git graph'
+
+# git
 alias g='git'
+alias gg='git graph'
+alias gs='git st'    # git status
+alias ga='git a'     # git add
+alias gci='git ci'   # git commit

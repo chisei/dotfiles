@@ -12,6 +12,8 @@ NeoBundle 'https://github.com/beyondwords/vim-twig'
 NeoBundle 'https://github.com/elzr/vim-json'
 NeoBundle 'https://github.com/osyo-manga/vim-over'
 NeoBundle 'https://github.com/kchmck/vim-coffee-script'
+NeoBundle 'https://github.com/briancollins/vim-jst'
+NeoBundle 'https://github.com/othree/yajs'
 
 " <C-U><C-A>
 noremap <C-U><C-A> :Unite buffer file_mru bookmark file<CR>
@@ -45,7 +47,10 @@ set fenc=utf-8
 set iminsert=0
 set imsearch=0
 set noundofile
+
 autocmd BufNewFile,BufRead *.twig set filetype=html.twig
+autocmd BufNewFile,BufRead *.es6 set filetype=javascript tabstop=2 shiftwidth=2
+autocmd BufNewFile,BufRead *.js setlocal shiftwidth=2 tabstop=2
 
 " load local configuration
 if filereadable(expand('~/.vimrc.local'))
