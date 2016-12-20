@@ -44,7 +44,7 @@ if [ -r /usr/local/opt/nvm/nvm.sh ]; then
     . "/usr/local/opt/nvm/nvm.sh"
 fi
 
-
+# ref: https://github.com/creationix/nvm#zsh
 autoload -U add-zsh-hook
 load-nvmrc() {
     local node_version="$(nvm version)"
