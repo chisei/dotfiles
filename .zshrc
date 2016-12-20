@@ -81,3 +81,5 @@ if exists peco; then
     zle -N peco_select_history
     bindkey '^R' peco_select_history
 fi
+
+export GOPATH=$HOME/.go
