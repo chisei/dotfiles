@@ -84,3 +84,10 @@ fi
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
+
+function repos {
+    if hash ghq 2>/dev/null && hash peco 2>/dev/null; then
+        cd $(ghq list -p | peco)
+    fi
+}
+
