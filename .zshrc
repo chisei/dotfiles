@@ -38,3 +38,31 @@ DISABLE_AUTO_TITLE=true
 
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey '^S' history-incremental-pattern-search-forward
+
+if [ -r /usr/local/opt/nvm/nvm.sh ]; then
+    export NVM_DIR="$HOME/.nvm"
+    . "/usr/local/opt/nvm/nvm.sh"
+fi
+
+
+autoload -U add-zsh-hook
+load-nvmrc() {
+    local node_version="$(nvm version)"
+
+    if [ -e "./.nvmrc" ]; then
+        local nvmrc_node_version=$(nvm version "$(cat .nvmrc)")
+    elif [ -e "./.node-version" ]; then
+        local nvmrc_node_version=$(nvm version "$(cat .node-version)")
+    fi
+
+    if [ "$nvmrc_node_version" != "" ]; then
+        if [ "$nvmrc_node_version" != "N/A" ] && [ "$nvmrc_node_version" != "$node_version" ]; then
+            nvm install ${nvmrc_node_version}
+        fi
+    elif [ "$node_version" != "$(nvm version default)" ]; then
+        [ "$nvmrc_node_version" != "$node_version" ]
+        nvm use default
+    fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
