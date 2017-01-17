@@ -10,3 +10,6 @@ alias gg='git graph'
 alias gs='git st'    # git status
 alias ga='git a'     # git add
 alias gci='git ci'   # git commit
+
+# docker
+alias dc='docker-compose'
