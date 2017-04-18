@@ -51,6 +51,7 @@ set noundofile
 autocmd BufNewFile,BufRead *.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript tabstop=2 shiftwidth=2
 autocmd BufNewFile,BufRead *.js setlocal shiftwidth=2 tabstop=2
+autocmd BufNewFile,BufRead *.md setlocal shiftwidth=2 tabstop=2
 
 " load local configuration
 if filereadable(expand('~/.vimrc.local'))
