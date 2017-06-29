@@ -2,6 +2,7 @@ alias l='ls -la'
 alias ll='ls -la'
 alias la='ls -lA'
 alias a='ag'
+alias o='open'
 alias tailf='tail -f'
 
 # git
