@@ -63,7 +63,8 @@ fi
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
-function repos {
+# repository viewer
+function re {
     if hash peco 2>/dev/null; then
         cd $(ls -d $HOME/GitHub/* | peco)
     fi
