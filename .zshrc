@@ -44,28 +44,6 @@ if [ -r /usr/local/opt/nvm/nvm.sh ]; then
     . "/usr/local/opt/nvm/nvm.sh"
 fi
 
-# ref: https://github.com/creationix/nvm#zsh
-autoload -U add-zsh-hook
-load-nvmrc() {
-    local node_version="$(nvm version)"
-
-    if [ -e "./.nvmrc" ]; then
-        local nvmrc_node_version=$(nvm version "$(cat .nvmrc)")
-    elif [ -e "./.node-version" ]; then
-        local nvmrc_node_version=$(nvm version "$(cat .node-version)")
-    fi
-
-    if [ "$nvmrc_node_version" != "" ]; then
-        if [ "$nvmrc_node_version" != "N/A" ] && [ "$nvmrc_node_version" != "$node_version" ]; then
-            nvm install ${nvmrc_node_version}
-        fi
-    elif [ "$node_version" != "$(nvm version default)" ]; then
-        [ "$nvmrc_node_version" != "$node_version" ]
-        nvm use default
-    fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
 
 # ref: https://github.com/mooz/percol
 function exists { which $1 &> /dev/null }
@@ -91,3 +69,4 @@ function repos {
     fi
 }
 
+eval "$(hub alias -s)"
