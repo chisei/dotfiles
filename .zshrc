@@ -60,9 +60,7 @@ if exists peco; then
     bindkey '^R' peco_select_history
 
     # repository viewer
-    function re {
-        cd $(ls -d $HOME/GitHub/* | peco)
-    }
+    alias re='cd $(ls -d $HOME/GitHub/* | peco)'
 fi
 
 export GOPATH=$HOME/.go
