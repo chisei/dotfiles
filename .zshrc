@@ -58,16 +58,15 @@ if exists peco; then
 
     zle -N peco_select_history
     bindkey '^R' peco_select_history
+
+    # repository viewer
+    function re {
+        cd $(ls -d $HOME/GitHub/* | peco)
+    }
 fi
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
-# repository viewer
-function re {
-    if hash peco 2>/dev/null; then
-        cd $(ls -d $HOME/GitHub/* | peco)
-    fi
-}
 
 eval "$(hub alias -s)"
