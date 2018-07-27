@@ -39,12 +39,6 @@ DISABLE_AUTO_TITLE=true
 bindkey '^R' history-incremental-pattern-search-backward
 bindkey '^S' history-incremental-pattern-search-forward
 
-if [ -r /usr/local/opt/nvm/nvm.sh ]; then
-    export NVM_DIR="$HOME/.nvm"
-    . "/usr/local/opt/nvm/nvm.sh"
-fi
-
-
 # ref: https://github.com/mooz/percol
 function exists { which $1 &> /dev/null }
 if exists peco; then
@@ -59,12 +53,21 @@ if exists peco; then
     zle -N peco_select_history
     bindkey '^R' peco_select_history
 
-    # repository viewer
-    alias re='cd $(ls -d $HOME/GitHub/* | peco)'
+    function repos() {
+        targetDir=$(ghq list| peco)
+        if [ "${targetDir}" ]; then
+            cd $(ghq root)/$targetDir
+            RPROMPT="Moved to $targetDir"
+            zle reset-prompt
+            RPROMPT=""
+        fi
+    }
+    zle -N repos
+    bindkey '^]' repos
 fi
 
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
-
 eval "$(hub alias -s)"
+
