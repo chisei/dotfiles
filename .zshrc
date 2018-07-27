@@ -71,3 +71,8 @@ export PATH=$PATH:$GOPATH/bin
 
 eval "$(hub alias -s)"
 
+if [ -d $(ghq list -p riywo/anyenv) ]; then
+    export PATH="$(ghq list -p riywo/anyenv)/bin:$PATH"
+    export ANYENV_ROOT="$(ghq list -p riywo/anyenv)"
+    eval "$(anyenv init -)"
+fi
