@@ -66,7 +66,6 @@ if exists peco; then
     bindkey '^]' repos
 fi
 
-export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
 eval "$(hub alias -s)"
