@@ -8,6 +8,7 @@
 [alias]
     a = add
     d = diff
+    dc = diff --cached
     co = checkout
     ci = commit -v
     sh = show
@@ -22,3 +23,4 @@
 [core]
     editor = vim
     excludesfile = ./.gitignore
+
