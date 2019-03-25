@@ -13,5 +13,6 @@ alias ga='git a'     # git add
 alias gci='git ci'   # git commit
 
 # docker
+alias d='docker'
 alias dc='docker-compose'
 alias de='docker exec -it $(docker ps | tail -n +2 | peco | cut -d" " -f1) bash'
