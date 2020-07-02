@@ -9,7 +9,6 @@ git submodule update
 
 # make symbolic link
 cd $HOME
-ln -s $WORK_SPACE/.zshrc $HOME/.zshrc
 ln -s $WORK_SPACE/.vim $HOME/.vim
 ln -s $WORK_SPACE/.vimrc $HOME/.vimrc
 ln -s $WORK_SPACE/.tmux.conf $HOME/.tmux.conf
