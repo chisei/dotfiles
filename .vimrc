@@ -47,6 +47,7 @@ set fenc=utf-8
 set iminsert=0
 set imsearch=0
 set noundofile
+set autochdir
 
 autocmd BufNewFile,BufRead *.twig set filetype=html.twig
 autocmd BufNewFile,BufRead *.es6 set filetype=javascript tabstop=2 shiftwidth=2
